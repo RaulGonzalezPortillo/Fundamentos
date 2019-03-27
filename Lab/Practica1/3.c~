@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main (void)
+{
+  int Acumulador = 1;
+  int Numero, NumeroMayor;
+  while (Acumulador <= 3)
+    {
+      printf ("Ingrese otro numero");
+      scanf("%d", &Numero);
+      if (Numero > NumeroMayor)
+	NumeroMayor = Numero;
+      Acumulador += 1;
+    }
+}

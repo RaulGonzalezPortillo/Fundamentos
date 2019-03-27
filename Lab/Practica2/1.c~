@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+void Potenciacion (int Base []);
+
+int main (void)
+{
+  int Cuadrados [100];
+  printf ("Calculando el cuadrado de los primeros 100 numeros positivos\n");
+  Potenciacion (Cuadrados);
+  printf ("----------");
+}
+
+void Potenciacion (int Base [])
+{
+  for (int i = 0; i < 100; i ++)
+    Base [i] = pow (i + 1, 2);
+}

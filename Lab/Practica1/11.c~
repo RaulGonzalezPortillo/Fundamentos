@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void ComprobacionNumeroMayor (int numero, int numeromayor, int *numeromayor);
+
+int main (void)
+{
+  int NumeroMayor, Numero;
+  do
+    {
+      printf ("Ingresa un numero positivo, los numeros negativos no se procesaran, ingresa -99 para terminar");
+      scanf ("%d", &Numero);
+      ComprobacionNumeroMayor (Numero, NumeroMayor, &NumeroMayor);
+    }
+  while (Numero != 99);
+  printf ("El numero mayor fue %d", NumeroMayor);
+}
+  
+void ComprobacionNumeroMayor (int numero, int numeromayor, int *numeromayor)
+{
+  if (numero > numeromayor && numero >= 0)
+    *numeromayor = numeromayor + numero;
+}

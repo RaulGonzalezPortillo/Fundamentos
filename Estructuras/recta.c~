@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+typedef struct Coordenada
+{
+  float x, y;
+} tipoCoordenada;
+
+void LeerCoordenadas (tipoCoordenada Puntos []);
+
+int main (void)
+{
+  tipoCoordenada Puntos [2];
+  printf ("A continuacion se leeran los dos puntos con el formato 'X, Y':\n");
+  LeerCoordenadas (Puntos);
+}
+
+void LeerCoordenadas (tipoCoordenada Puntos [])
+{
+  int i;
+  for (i = 0; i < 2; i ++)
+    {
+      printf ("\tCoordenada %d: ", i + 1);
+      scanf ("%f, %f", &Puntos [i].x, &Puntos [i].y);
+    }
+}

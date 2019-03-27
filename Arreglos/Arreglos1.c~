@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main (void)
+{
+  int Valores[10];
+  printf ("Introduzca 10 valores enteros para calcularles la sumatoria y el promedio, así como imprimir el valor mas grande y el mas pequeño\n");
+  for (int Indice = 0; Indice < 10; Indice ++)
+    {
+      printf ("\nValor #%d: ", Indice + 1);
+      scanf ("%d", &Valores[Indice]);
+    }
+}
+  
+  

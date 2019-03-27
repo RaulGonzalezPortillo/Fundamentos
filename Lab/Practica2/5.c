@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <string.h>
+
+void Leer (char Cadena []);
+void Palindromo (char Cadena []);
+
+int main (void)
+{
+    char Frase [200];
+    Leer (Frase);
+    Palindromo (Frase);
+}
+
+void Leer (char Cadena [])
+{
+    printf ("A continuacion, ingrese una frase\n");
+    gets (Cadena);
+}
+
+void Palindromo (char Cadena [])
+{
+    int Longitud = strlen (Cadena), i, j, Palindromo;
+    for (i = 0; i < Longitud; i ++)
+    {
+        if (Cadena [i] == ' ')
+        {
+            for (j = i; j < Longitud ; j ++)
+            {
+                Cadena [j] = Cadena [j + 1];
+            }
+        }
+    }
+    Longitud = strlen (Cadena);
+    for (i = 0; i < Longitud; i ++)
+    {
+        if (Cadena [i] >= 65 && Cadena [i] <= 90)
+            Cadena [i] += 32;
+    }
+    j = Longitud - 1;
+    Palindromo = 1;
+    for (i = 0; i < Longitud; i ++)
+    {
+        if (Cadena [i] != Cadena [j])
+            Palindromo = 0;
+        j --;
+    }
+    if (Palindromo == 1)
+        printf ("La frase introducida es un palindromo\n");
+    if (Palindromo == 0)
+        printf ("La frase introducida NO es un palindromo\n");
+}

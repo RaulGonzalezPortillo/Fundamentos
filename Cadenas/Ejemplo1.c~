@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+void Leer (char Linea[]);
+void Imprima (char Linea[]);
+
+int main (void)
+{
+  char Frase[200];
+  Leer (Frase);
+  printf ("La frase es:\n");
+  puts (Frase);
+  Imprime (Frase);
+}
+
+void Leer (char Linea[])
+{
+  printf ("Introduzca una frase de hasta 199 caracteres\n");
+  gets (Linea);
+}
+
+void Imprime (char Linea[])
+{
+  int i;
+  for (i = 0; i < strlen(Linea), i++)
+    printf ("%c", Linea[i]);
+  printf ("\n");
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void)
+{
+  int Numero, Factorial = 1;
+  printf("Introduzca un numero para obtener la factorial ");
+  scanf("%d", &Numero);
+  if(Numero >= 2)
+    {
+      for(int i=Numero ; i != 1 ; i--)
+	Factorial=Factorial*i;
+      printf("La factorial es: %d",Factorial);
+    }
+  if(Numero == 1)
+    printf("La factorial es: 1");
+  if(Numero <= 0)
+    printf("Imposible calcular");
+}

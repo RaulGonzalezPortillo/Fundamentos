@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+void DeterminacionDeAnhioBisiesto (int anhio, int *anhiobisiesto);
+void DeterminacionDeDiasDelMes (mes, *diasdelmes);
+
+int main (void)
+{
+  int Dia, Mes, Anhio, DiasDelMes, AnhioBisiesto;
+  printf ("Ingrese la fecha actual con formato 'DD/MM/AAAA' para calcular cual sera la fecha del dia siguiente\n");
+  scanf ("%d/%d/%d", Dia, Mes, Anhio);
+  DeterminacionDeAnhioBisiesto (Anhio, &AnhioBisiesto);
+  DeterminacionDeDiasDelMes (Mes, &DiasDelMes);
+  Dia++;
+  if (Dia > DiasDelMes)
+    {
+      Dia -= DiasDelMes;
+      Mes++;
+      if (Mes > 12)
+	{
+	  Mes -= 12;
+	  Anhio++;
+	}
+    }
+      
+}
+
+void DeterminacionDeAnhioBisiesto (int anhio, int *anhiobisiesto)
+{
+  if ((Anhio % 4) == 0)
+    AnhioBisiesto = 1;
+  else
+    AnhioBisiesto = 0;
+}
+
+void DeterminacionDeDiasDelMes (int mes, int *diasdelmes);
+{
+  if (mes == 01 || mes == 03 || mes == 05 || mes == 07 || mes == 08 || mes == 10 || mes == 12)
+    *diasdelmes = 31;
+  if (mes == 04 || mes == 06 || mes == 09 || mes == 11)
+    *diasdelmes = 30;
+  if (mes == 02 && AnhioBisiesto == 1)
+    *diasdelmes = 29;
+  if (mes == 02 && AnhioBisiesto == 0)
+    *diasdelmes = 28;
+}

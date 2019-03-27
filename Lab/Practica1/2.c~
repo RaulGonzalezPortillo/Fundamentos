@@ -1,0 +1,10 @@
+int main (void)
+{
+  int Suma = 0;
+  do
+    {
+      Suma = Suma + 3;
+      printf("%d", Suma);
+    }
+  while (Suma < 99);
+}

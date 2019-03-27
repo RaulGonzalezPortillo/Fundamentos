@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef struct def_elemento
+{
+  int dato;
+  struct def_elemento *sig;
+} tipoelemento;
+
+void InsertaInicio (tipoelemento *Inicio, int numero)
+{
+  

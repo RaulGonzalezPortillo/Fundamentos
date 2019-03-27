@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+typedef struct defAlumno
+{
+  char nombre [30];
+  char cuenta [15];
+  float cal1, cal2, cal3;
+} tipoAlumno;
+
+int main (void)
+{
+  tipoAlumno Alumnos [5];
+}

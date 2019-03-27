@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+typedef struct
+{
+  int Real;
+  int Imaginario;
+} tipo_complejo;
+
+int main (int argc, char *argv [])
+{
+  if (argc == 1)
+    {
+      printf ("No se especifico un nombre para el archivo de los resultados.\n");
+      printf ("Uso del programa: ./OpsComp Operacion NombreArchivo\n");
+      exit (0);
+    }
+  FILE *ArchivoResultados;
+}

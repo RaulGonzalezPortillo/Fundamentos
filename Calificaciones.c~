@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main (void)
+{
+  int NumAlumno, NumCalificacion, Calificacion, Promedio, PromedioGrupal;
+  for (Alumno = 1; Alumno = 20; Alumno++)
+    {
+      for (NumCalificacion = 1; NumCalificacion = 3; NumCalificacion++)
+	{
+	  printf ("Ingresa tu calificacion");
+	  scanf ("%d", &Calificacion);
+	  Promedio += Calificacion;
+	}
+      Promedio /= 3;
+      printf ("El promedio del alumno %d fue de", Alumno, Promedio);
+      PromedioGrupal += Promedio;
+    }
+  PromedioGrupal /= 20;
+  printf ("El promedio del grupo es de %d", PromedioGrupal);
+}

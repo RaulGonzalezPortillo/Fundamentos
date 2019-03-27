@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+void Leer (int Lista[]);
+void Imprimir (int Lista[]);
+
+int main (void)
+{
+  int Temperaturas [24];
+  Leer (Temperaturas);
+  Imprimir (Temperaturas);

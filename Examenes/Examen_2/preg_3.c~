@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+
+void LeerDatos (int *numero, int *base);
+void Conversion (int numero, int base, int numeroconvertido[], int *longitud);
+void Imprimir (int numero, int base, int numeroconvertido[], int longitud);
+
+int main (void)
+{
+  int Numero, Base, NumeroConvertido [100], Longitud;
+  LeerDatos (&Numero, &Base);
+  Conversion (Numero, Base, NumeroConvertido, &Longitud);
+  Imprimir (Numero, Base, NumeroConvertido, Longitud);
+}
+
+void LeerDatos (int *numero, int *base)
+{
+  printf ("Ingrese un numero en base 10: ");
+  scanf ("%d", numero);
+  printf ("Ingrese la base a la que lo quiere convertir: ");
+  scanf ("%d", base);
+}
+
+void Conversion (int numero, int base, int numeroconvertido [], int *longitud)
+{
+  int no, i;
+  i = 0;
+  *longitud = 0;
+  no = numero;
+  while (no > 0)
+    {
+      numeroconvertido [i] = no % base;
+      no /= base;
+      i ++;
+      (*longitud) ++;
+    }
+}
+
+void Imprimir (int numero, int base, int numeroconvertido [], int longitud)
+{
+  int i;
+  printf ("El numero %d convertido a base %d es = ", numero, base);
+  for (i = longitud - 1; i >= 0; i --)
+    printf ("%d", numeroconvertido [i]);
+  printf ("\n");
+}
+

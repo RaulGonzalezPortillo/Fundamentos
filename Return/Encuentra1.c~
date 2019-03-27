@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int encuentra (char cadena [], char caracter);
+
+int main (void)
+{
+  char frase [200];
+  char letra;
+  printf (“¿Cual es tu frase?\n”);
+  gets (frase);
+  printf (“¿Que caracter buscas?\n”);
+  scanf (“%c”, &letra);
+  if (encuentra (frase, letra) == 1)
+    printf (“Esta letra si esta en la frase\n”);
+  else
+    printf (“Esta letra no esta en la frase\n”);
+}
+
+
+int encuentra (char cadena [], char caracter)
+{
+  int i = 0;
+  while ((i < strlen (cadena)) && (caracter != cadena [i]))
+    i++;
+  if (i < strlen (cadena))
+    return 1;
+  else
+    return 0;
+} 

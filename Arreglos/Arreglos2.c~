@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main (void)
+{
+  int Numeros[100], Cantidad, Indice,i,aux;
+  printf ("Introduzca la cantidad de numeros a leer, esta no debe de ser mayor a 100\n");
+  scanf ("%d", &Cantidad);
+  if (Cantidad <= 100)
+    {
+      for (Indice = 0; Indice < Cantidad; Indice ++)
+	{
+	  printf ("\nValor #%d: ", Indice + 1);
+	  scanf ("%d", &Numeros[Indice]);
+	}
+      for(Indice=0; Indice<Cantidad; Indice++)
+	{
+	  for(i=0;i<Cantidad;i++)
+	    {
+	      if(Numeros[i]>Numeros[Indice])
+		{
+		  aux=Numeros[Indice];
+		  Numeros[Indice]=Numeros[i];
+		  Numeros[i]=aux;
+		}
+	    }
+	}
+      for(Indice=0;Indice<Cantidad; Indice++)
+	printf("%d\n",Numeros[Indice]);
+    }
+  else
+    printf ("Se ha especificado que se introducirian mas de 100 numeros, por lo que el programa se detuvo\n");
+}
+  

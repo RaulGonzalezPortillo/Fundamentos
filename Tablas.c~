@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main (void)
+{
+  int Tabla = 1;
+  int Acumulador, Resultado;
+  printf ("Tablas de multiplicar del 1 al 20");
+  do
+    {
+      printf ("Tabla del %d", Tabla);
+      Acumulador = 1;
+      do
+	{
+	  Tabla * Acumulador = Resultado;
+	  printf ("%d x %d = %d", Tabla, Acumulador, Resultado);
+	  Acumulador += 1;
+	}
+      while (Acumulador <= 10);
+      Tabla += 1;
+    }
+}

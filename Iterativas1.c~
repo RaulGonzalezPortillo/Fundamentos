@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main (void)
+{
+  Numero = -1;
+  do
+    {
+      printf("Introduzca un numero positivo, introducir un numero negativo terminara el programa");
+      scanf("%d", &Numero);
+      if(Numero > NMayor)
+	NMayor = Numero;
+    }
+  while (Numero >= 0);
+  printf("El numero mayor es %d", &NMayor);
+}

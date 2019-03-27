@@ -1,0 +1,66 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+typedef struct def_dato
+{
+  int dato;
+  struct def_dato *sig;
+} tipodato;
+
+void Imprime (tipodato *Inicio);
+void BorrarLista (tipodato *Inicio);
+void Inserta (tipodato **Inicio, int numero);
+
+int main (void)
+{
+  tipodato *Primero = NULL;
+  printf ("Inserte numeros (letra para terminar)\n");
+  while (scanf ("%d", &valor) == 1)
+    Inserta (&Primero, valor);
+  printf ("Los valores introducidos son: \n");
+  Imprime (Primero);
+  BorrarLista (Primero);
+}
+
+void Imprime (tipodato *Inicio)
+{
+  tipodato *tmp;
+  tmp = Inicio;
+  while (tmp != NULL)
+    {
+      printf ("%d\n", tmp -> dato);
+      tmp = tmp -> sig;
+    }
+}
+
+void BorrarLista (tipodato *Inicio)
+{
+  tipodato *tmp;
+  tmp = Inicio;
+  while (tmp != NULL)
+    {
+      Inicio = Inicio -> sig;
+      free (tmp);
+      tmp = Inicio;
+    }
+}
+
+void Inserta (tipodato **Inicio, int numero)
+{
+  tipodato *tmp, *tmp2, *tmp3;
+  tmp = (tipodato *) malloc (sizeof (tipodato));
+  tmp -> dato = numero;
+  tmp2 = *Inicio;
+  while (tmp2 != NULL)
+    {
+      if (tmp -> dato > tmp2 -> dato)
+	tmp2 = tmp2 -> sig;
+      else
+	{
+	  tmp3 = tmp2;
+	  while (tmp3 -> sig != NULL)
+	    *recorrer todo e insertar tmp aqui*
+	}
+    }
+}
